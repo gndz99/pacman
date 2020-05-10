@@ -11,6 +11,11 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.application.Platform;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -73,6 +78,7 @@ public class Controller implements EventHandler<KeyEvent> {
         this.levelLabel.setText(String.format("Level: %d", this.pacManModel.getLevel()));
         if (pacManModel.isGameOver()) {
             this.gameOverLabel.setText(String.format("GAME OVER"));
+            writescore();
             pause();
         }
         if (pacManModel.isYouWon()) {
@@ -84,6 +90,19 @@ public class Controller implements EventHandler<KeyEvent> {
         }
         if (ghostEatingModeCounter == 0 && pacManModel.isGhostEatingMode()) {
             pacManModel.setGhostEatingMode(false);
+        }
+    }
+
+    private void writescore() {
+        String filename = "scores.txt";
+        try {
+            String line = "Name: " + finalPacman.NameFrame.name+ "\nScore: "+ this.pacManModel.getScore() +"\n\n";
+            Files.write(Paths.get(".\\scores.txt"), line.getBytes(), StandardOpenOption.APPEND);
+        }catch (IOException e) {
+            System.out.println("No file named "+filename+" please create one");
+        }
+        catch (Exception e){
+            System.out.println("Error while appending to the score log");
         }
     }
 
@@ -123,8 +142,8 @@ public class Controller implements EventHandler<KeyEvent> {
      * Pause the timer
      */
     public void pause() {
-            this.timer.cancel();
-            this.paused = true;
+        this.timer.cancel();
+        this.paused = true;
     }
 
     public double getBoardWidth() {
