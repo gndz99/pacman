@@ -13,17 +13,7 @@ This Pacman game which inputs name is a class project. It uses the Model-View-Co
 ![Level 1](level1screen.png)
 
 ## Features
-Implements most typical features of Pac-Man.Before entring the game user inputs their name then,the game opens. The user can press the arrow keys to dictate the direction that Pac-Man is moving, and he is chased by two ghosts that move randomly unless they are in the same row or column as Pac-Man, in which case they move towards him in the normal mode, or move away from him if he has recently eaten a big dot. Changes in the Model are driven by key and timer events. Current score, level, and Game Over/You Won! messages are displayed in Labels at the top of the window, which are updated continuously to reflect changes in the Model.
-
-Users can play three different levels and start new games by pressing G. Level map layouts are each stored in a text file that encodes the various screen components based on this system:
-- "W" indicates a wall
-- "E" indicates an empty square
-- "B" indicates a big dot
-- "S" indicates a small dot
-- "1" and "2" indicate the ghosts' homes
-- "P" indicates Pacman's starting position
-
-Three levels are provided, but more could be added to the levels folder in the future using this system (level file names must also be added to the list of level filename strings in the Controller class).
+Implements most typical features of Pac-Man.Before entring the game user inputs their name then,the game opens. The user can press the arrow keys to dictate the direction that Pac-Man is moving, and he is chased by two ghosts that move randomly unless they are in the same row or column as Pac-Man, in which case they move towards him in the normal mode, or move away from him if he has recently eaten a big dot. Changes in the Model are driven by key and timer events. Current score, level, and Game Over/You Won! messages are displayed in Labels at the top of the window, which are updated continuously to reflect changes in the Model.After every level and after each deaths name and score is stored in scores.txt. So, that you can check your scores.
 
 ## Repo structure
 ```
