@@ -44,5 +44,5 @@ Modified the class to use NameFrame class and also scores.txt.
 └── .gitignore                : Files and directories to be ignored by git
 
 
-## Orignal createrh ttps://github.com/jbaskauf
+## Orignal creater https://github.com/jbaskauf
 
