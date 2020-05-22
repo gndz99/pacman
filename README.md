@@ -31,7 +31,7 @@ Modified the class to use NameFrame class and also scores.txt.
 ├── pacman.iml                : IntelliJ module file
 ├── scores.txt                : Scores and name is stored
 ├── src                       : Project code and resource files
-│   ├── levels   |            : Text files containing level layout information (interpreted by the Model when initialized)
+│   ├── levels                : Text files containing level layout information (interpreted by the Model when initialized)
 │   ├── res                   : Image files (png and gif) 
 |   └── finalPacman           : MVC java files and fxml layout file
 │        ├── Contoller.java   : Game controlling code
