@@ -42,6 +42,6 @@ Modified the class to use NameFrame class and also scores.txt.
 |        └── pacamn.fxml
 |
 └── .gitignore                : Files and directories to be ignored by git
-'''
+
 
 
